@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry excluding="StarTriangle/src/|JavaBasics/src/|ArraySort/src/|NumberOfDays/src/|MatrixAddition/src/" kind="src" path=""/>
+	<classpathentry kind="src" path="ArraySort/src"/>
+	<classpathentry kind="src" path="JavaBasics/src"/>
+	<classpathentry kind="src" path="MatrixAddition/src"/>
+	<classpathentry kind="src" path="NumberOfDays/src"/>
+	<classpathentry kind="src" path="StarTriangle/src"/>
+	<classpathentry kind="output" path="ArraySort/bin"/>
+</classpath>
