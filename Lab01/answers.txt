@@ -1,0 +1,5 @@
+Answers to questions:
+- What happens if users choose "Cancel"?
+	The application will count as the user has chosen "No".
+- How to customize the options to users, e.g. only two options: “Yes” and “No”, OR “I do” and “I don’t” 
+	Can use the method showOptionDialog for customization (many parts of the dialog, including the buttons of options). 
