@@ -169,6 +169,17 @@ public class Cart {
 		return(total);
 	}
 	
-	
+	public void print() {
+		System.out.println("***********************CART***********************");
+		System.out.println("Ordered Items:");
+		float totalCost = 0;
+		for (int i = 1; i < itemsOrdered.length + 1; i++) {
+			System.out.println("1. " + itemsOrdered[i - 1].getDetail());
+			totalCost += itemsOrdered[i - 1].getCost();
+		}
+		System.out.println("Total cost: " + Float.toString(totalCost));
+		System.out.println("**************************************************");
+	}
 	
 }
+;
