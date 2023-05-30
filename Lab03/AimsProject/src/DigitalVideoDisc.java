@@ -46,6 +46,23 @@ public class DigitalVideoDisc {
 	public void setCost(float cost) {
 		this.cost = cost;
 	}
+	public boolean search(String inputTitle) {
+		String[] splitArr = this.title.split(" ",0);
+		for (String word : splitArr) {
+			if (word.toLowerCase().equals(inputTitle.toLowerCase())) {
+				return true;
+			}
+		}
+		return false;
+	}
+	public boolean search(int inputId) {
+		if (this.id == inputId) {
+			return true;
+		}
+		else {
+			return false;
+		}
+	}
 	public DigitalVideoDisc(String title) {
 		super();
 		this.title = title;

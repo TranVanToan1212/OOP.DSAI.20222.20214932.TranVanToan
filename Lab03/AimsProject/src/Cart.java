@@ -180,6 +180,34 @@ public class Cart {
 		System.out.println("Total cost: " + Float.toString(totalCost));
 		System.out.println("**************************************************");
 	}
+	public void search(int input) {
+		boolean state = false;
+		System.out.println("Result for \"" + input + "\" :");
+		for (DigitalVideoDisc disc: itemsOrdered) {
+			if (disc.search(input) == true) {
+				System.out.println(disc.getDetail());
+			}
+		}
+		if (state == false) {
+			System.out.println("No DVD found.");
+		}
+	}
 	
+	public void search(String input) {
+		String[] inputSplit = input.split(" ",0);
+		boolean state = false;
+		System.out.println("Result for \"" + input + "\" :");
+		for (DigitalVideoDisc disc: itemsOrdered) {
+			for (String word: inputSplit) {
+				if(disc.search(word) == true) {
+					System.out.println(disc.getDetail());
+					state = true;
+				}
+			}
+		}
+		if (state == false) {
+			System.out.println("No DVD found.");
+		}
+	}
 }
 ;
