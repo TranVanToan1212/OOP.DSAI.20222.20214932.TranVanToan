@@ -31,41 +31,41 @@ public class Cart {
 		}
 	}
 	
-	public void addDigitalVideoDisc(DigitalVideoDisc [] dvdList) {
-		List<DigitalVideoDisc> addtoItemsList = 
-				new ArrayList<DigitalVideoDisc>(Arrays.asList(dvdList));
-		
-		int expectedQtyOrdered = qtyOrdered + addtoItemsList.size();
-		
-		if (expectedQtyOrdered <= 20) {
-			
-			List<DigitalVideoDisc> itemsList = 
-					new ArrayList<DigitalVideoDisc>(Arrays.asList(itemsOrdered));
-			
-			itemsList.addAll(addtoItemsList);
-			System.out.println("Items successfully added to cart");
-			
-			if (expectedQtyOrdered == 20) {
-				System.out.println("The cart is full");
-			}
-			else if (expectedQtyOrdered == 19) {
-				System.out.println("The cart is almost full");
-			}
-			
-			for (int i = 0; i < addtoItemsList.size()) {
-				if(itemsList.contain(addtoItemsList.get(i))) {
-					continue;
-				}
-				else {
-					itemsList.add(addtoItemsList.get(i));
-					qtyOrdered += 1;
-				}
-			}
-		}
-		else {
-			System.out.println("Exceeded cart's capacity");
-		}	
-	}
+//	public void addDigitalVideoDisc(DigitalVideoDisc [] dvdList) {
+//		List<DigitalVideoDisc> addtoItemsList = 
+//				new ArrayList<DigitalVideoDisc>(Arrays.asList(dvdList));
+//		
+//		int expectedQtyOrdered = qtyOrdered + addtoItemsList.size();
+//		
+//		if (expectedQtyOrdered <= 20) {
+//			
+//			List<DigitalVideoDisc> itemsList = 
+//					new ArrayList<DigitalVideoDisc>(Arrays.asList(itemsOrdered));
+//			
+//			itemsList.addAll(addtoItemsList);
+//			System.out.println("Items successfully added to cart");
+//			
+//			if (expectedQtyOrdered == 20) {
+//				System.out.println("The cart is full");
+//			}
+//			else if (expectedQtyOrdered == 19) {
+//				System.out.println("The cart is almost full");
+//			}
+//			
+//			for (int i = 0; i < addtoItemsList.size()) {
+//				if(itemsList.contain(addtoItemsList.get(i))) {
+//					continue;
+//				}
+//				else {
+//					itemsList.add(addtoItemsList.get(i));
+//					qtyOrdered += 1;
+//				}
+//			}
+//		}
+//		else {
+//			System.out.println("Exceeded cart's capacity");
+//		}	
+//	}
 		
 	public void addDigitalVideoDisc(DigitalVideoDisc ... dvdList) {
 
@@ -89,8 +89,8 @@ public class Cart {
 				System.out.println("The cart is almost full");
 			}
 			
-			for (int i = 0; i < addtoItemsList.size()) {
-				if(itemsList.contain(addtoItemsList.get(i))) {
+			for (int i = 0; i < addtoItemsList.size();) {
+				if(itemsList.contains(addtoItemsList.get(i))) {
 					continue;
 				}
 				else {
